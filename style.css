@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
@@ -6,35 +7,35 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eaeaea;
-    font-family: 'Arial', sans-serif;
+    background-color: rgb(0, 0, 0);
+    font-family: Almendra, sans-serif;
 }
 
-/* Card container for 3D perspective */
+
 .card-container {
     perspective: 1200px;
     width: 300px;
     height: 200px;
 }
 
-/* The card itself */
+
 .card {
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 1s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0);
     cursor: pointer;
     border-radius: 15px;
 }
 
-/* Card flipping effect */
+
 .card.flip {
     transform: rotateY(180deg);
 }
 
-/* Both sides of the card */
+
 .front, .back {
     position: absolute;
     width: 100%;
@@ -43,35 +44,36 @@ body, html {
     border-radius: 15px;
 }
 
-/* Front side of the card (cover) */
+
 .front {
-    background-color: #ffcc00;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ff9900;
+    border: 2px solid #cecac5;
     border-radius: 15px;
+    color: white;
 }
 
-/* Front content */
+
 .card-cover {
     text-align: center;
     font-size: 24px;
-    color: #333;
+    color: #ffffff;
 }
 
-/* Back side of the card (inside) */
+
 .back {
-    background-color: #ff66b2;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotateY(180deg);
-    border: 2px solid #ff3399;
+    border: 2px solid black;
     border-radius: 15px;
 }
 
-/* Inside content of the card */
+
 .card-content {
     text-align: center;
     color: #fff;
